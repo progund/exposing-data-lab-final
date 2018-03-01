@@ -44,8 +44,9 @@ public class Client {
       HttpURLConnection connection =
         (HttpURLConnection) new URL(url).openConnection();
       connection.setRequestMethod("GET");
-      connection.connect();
+      //connection.connect();
       int code = connection.getResponseCode();
+      //connection.disconnect();
       return code == 200;
     } catch (IOException e) {
       System.err.println("Error testing http status: " + e.getMessage());
